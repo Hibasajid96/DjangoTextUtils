@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Text Utilities</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+                .navbar {
+              width: 100%;
+              background-color: #555;
+              overflow:none;
+            }
+
+            /* Navbar links */
+            .navbar a {
+              float: right;
+              text-align: 5px;
+              padding: 15px;
+              color: white;
+              text-decoration: none;
+              font-size: 17px;
+            }
+
+            /* Navbar links on mouse-over */
+            .navbar a:hover {
+              background-color: #000;
+            }
+
+            /* Current/active navbar link */
+            .active {
+              background-color: #4CAF50;
+            }
+
+            /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+            @media screen and (max-width: 100px) {
+              .navbar a {
+                float: none;
+                display: block;
+              }
+            }
+
+
+            .switch {
+              position: relative;
+              float:right
+              display: inline-block;
+              width: 60px;
+              height: 34px;
+            }
+
+            .switch input {
+              opacity: 0;
+              width: 0;
+              height: 0;
+            }
+
+            .slider {
+              position: absolute;
+              cursor: pointer;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: #ccc;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+
+            .slider:before {
+              position: absolute;
+              content: "";
+              height: 26px;
+              width: 26px;
+              left: 4px;
+              bottom: 4px;
+              background-color: white;
+              -webkit-transition: .4s;
+              transition: .4s;
+            }
+
+            input:checked + .slider {
+              background-color: #2196F3;
+            }
+
+            input:checked + .slider:before {
+              -webkit-transform: translateX(26px);
+              -ms-transform: translateX(26px);
+              transform: translateX(26px);
+            }
+
+
+            /* Rounded sliders */
+            .slider.round {
+              border-radius: 34px;
+            }
+
+            .slider.round:before {
+              border-radius: 50%;
+            }
+
+            .btn {
+              border: none;
+              color: white;
+              padding: 15px 28px;
+              font-size: 16px;
+              cursor: pointer;
+              float:center
+            }
+            .warning {background-color: #ff9800;} /* Orange */
+            .warning:hover {background: #e68a00;}
+        </style>
+</head>
+
+    <body>
+        <div class="navbar">
+              <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+           <h2 class="container" style="color:orange">Hello :) This is my first django web application </h2>
+        </div>
+
+        <br>
+        <h3 class="container-fluid"> Welcome to text- utils </h3>
+        <h5 class="container">Please enter your text below:<p>
+        <form action="/analyse" method="post">{% csrf_token %}
+            <div class="container">
+                <textarea name="text" rows="5" cols="35">Enter text</textarea><br>
+            <br>  Remove punctuation
+               <p>
+                   <label class="switch"><br>
+                    <input type="checkbox" name="removepunc">
+                    <span class="slider round"></span>
+               </label>
+               </p>
+             Full caps
+               <p>
+                   <label class="switch"><br>
+                      <input type="checkbox"name="capfirst">
+                      <span class="slider round"></span>
+                    </label>
+               </p>
+            New line remover
+               <p>
+                   <label class="switch"><br>
+                      <input type="checkbox"name="newlineremover">
+                      <span class="slider round"></span>
+                    </label>
+               </p>
+            Space remover
+              <p>
+                  <label class="switch"><br>
+                      <input type="checkbox"name="spaceremover">
+                      <span class="slider round"></span>
+                  </label>
+              </p>
+
+
+
+            <button type=submit class="btn warning" >Submit</button>
+           </div>
+        </form>
+        </h5>
+    </p>
+</body>
+
+
+</html>

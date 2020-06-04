@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Error</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .navbar {
+          width: 100%;
+          background-color: #555;
+          overflow:none;
+        }
+
+        /* Navbar links */
+        .navbar a {
+          float: right;
+          text-align: 5px;
+          padding: 15px;
+          color: white;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+        /* Navbar links on mouse-over */
+        .navbar a:hover {
+          background-color: #000;
+        }
+
+        /* Current/active navbar link */
+        .active {
+          background-color: #4CAF50;
+        }
+
+        /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+        @media screen and (max-width: 100px) {
+          .navbar a {
+            float: none;
+            display: block;
+          }
+        }
+        </style>
+
+    </head>
+    <body>
+      <div class="navbar">
+                  <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+               <h2 class="container" style="color:orange">Hello :) This is my first django web application </h2>
+      </div>
+    <p><br><br>
+        <h5 class="container">You have not selected any option.<br> Please push any toggle button and try again.<br>
+            <br><p><a class="btn btn-primary"href="/"> Try again</a></p>
+        </h5>
+    </p>
+
+    </body>
+</html>
