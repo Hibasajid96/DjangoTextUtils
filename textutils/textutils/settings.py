@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'dentalclinic.urls'
+ROOT_URLCONF = 'textutils.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'dentalclinic.wsgi.application'
+WSGI_APPLICATION = 'textutils.wsgi.application'
 
 
 # Database
